@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Calculator.CalculatorCalorii">
+
+
+    <EditText
+        android:id="@+id/editTextGreutate"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:textSize="25dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewGreutate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight(kg)"
+        android:textSize="25dp"
+        android:layout_marginLeft="250dp"
+        />
+
+
+    <EditText
+        android:id="@+id/editTextInaltime"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextGreutate"
+        android:layout_marginLeft="100dp"
+        android:textSize="25dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewInaltime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height(cm)"
+        android:textSize="25dp"
+        android:layout_below="@id/textViewGreutate"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="35dp"
+        />
+
+    <TextView
+        android:id="@+id/levels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please select your activity level"
+        android:textSize="20dp"
+        android:layout_below="@id/editTextInaltime"
+        android:layout_marginTop="35dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioGroupActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/levels">
+        <RadioButton android:id="@+id/firstButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sedentary"
+            android:padding="4dp"/>
+
+        <RadioButton
+            android:id="@+id/secondButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Less active"
+            android:padding="4dp"/>
+        <RadioButton android:id="@+id/thirdButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Active"
+            android:padding="4dp"/>
+        <RadioButton android:id="@+id/fourthButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Very active"
+            android:padding="4dp"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/ages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How old are you ? I know , I know is hard , but please be honest"
+        android:textSize="14sp"
+        android:layout_below="@id/radioGroupActivity"
+        android:layout_marginTop="15dp"
+        />
+
+
+    <SeekBar
+        android:id="@+id/seekBarAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ages"/>
+
+    <TextView
+        android:id="@+id/textViewAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginLeft="150dp"
+        android:layout_below="@+id/seekBarAge"
+        android:text="100"/>
+
+    <TextView
+        android:layout_toRightOf="@id/textViewAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/seekBarAge"
+        android:text="ages"/>
+
+
+    <TextView
+        android:id="@+id/checkboxText"
+        android:layout_below="@+id/textViewAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please select your gender"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_below="@id/checkboxText"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkboxs"
+        >
+        <CheckBox android:id="@+id/checkbox_masculin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="M" />
+        <CheckBox android:id="@+id/checkbox_feminim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="F" />
+        <CheckBox android:id="@+id/checkbox_another"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ANOTHER" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pursposes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkboxs"
+        android:textSize="20sp"
+        android:text="Please select you purpose">
+    </TextView>
+
+
+    <Spinner
+        android:id="@+id/spinnerPurpose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkboxs"
+        android:layout_toRightOf="@id/pursposes"
+        android:layout_marginLeft="10dp">
+
+    </Spinner>
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerPurpose"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="87dp"
+        android:text="Calculate" />
+
+</RelativeLayout>
