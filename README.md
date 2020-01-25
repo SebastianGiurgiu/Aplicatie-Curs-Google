@@ -1,0 +1,2 @@
+# Aplicatie-Curs-Google
+Prototip al unui aplicatii pentru un nutritionist care poate alege din diverse alimente pentru a crea o masa.El de asemenea poate sa analizeze pentru fiecare aliment numarul de calorii si macronutrientii pe care ii contine.Dupa crearea unei mese nutritionistul poate vizualiza numarul de calorii si gramajele acelei mese si poate sa o trimita in mod direct prin email clientului.Aplicatia mai ofera posibilitatea de a adauga noi alimente.Toate datele despre alimente sunt pastrate cu ajutorul unei baze de data locale Sqlite
